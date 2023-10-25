@@ -1,4 +1,4 @@
-def calcular_retirada(tempo, capital):
+def calcular_retirada(capital):
     return capital * 0.01
 
 
@@ -11,7 +11,7 @@ def calcular_retiradas_continua(meses, capital_inicial):
     capital_acumulado = capital_inicial
     for t in range(1, meses + 1):
         capital_acumulado = calcular_variacao(t, capital_inicial, retiradas)
-        retirada = calcular_retirada(t, capital_acumulado)
+        retirada = calcular_retirada(capital_acumulado)
         retiradas.append(retirada)
         print(f"retirada:{retirada}\ncapital_acumulado: {capital_acumulado}\n")
     return retiradas
